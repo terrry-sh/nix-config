@@ -47,14 +47,14 @@ mkdir -p "$NIX_CONFIG_DIR"
 echo -e "${YELLOW}Processing flake template for user: $USER${NC}"
 sed "s/<USER>/$USER/g" flake-template.nix > flake.nix
 
-# Symlink flake.nix to home-manager config
-echo -e "${YELLOW}Symlinking flake.nix to $CONFIG_DIR${NC}"
+# Copy flake.nix to home-manager config
+echo -e "${YELLOW}Copying flake.nix to $CONFIG_DIR${NC}"
 if [ -e "$CONFIG_DIR/flake.nix" ] || [ -L "$CONFIG_DIR/flake.nix" ]; then
     echo -e "${YELLOW}Backing up existing flake.nix to flake.nix.backup${NC}"
     mv "$CONFIG_DIR/flake.nix" "$CONFIG_DIR/flake.nix.backup" 2>/dev/null || true
 fi
-ln -sf "$(pwd)/flake.nix" "$CONFIG_DIR/flake.nix"
-echo -e "${GREEN}Symlinked flake.nix to $CONFIG_DIR/flake.nix${NC}"
+cp flake.nix "$CONFIG_DIR/flake.nix"
+echo -e "${GREEN}Copied flake.nix to $CONFIG_DIR/flake.nix${NC}"
 
 # Symlink nix.conf
 echo -e "${YELLOW}Setting up nix.conf with experimental features${NC}"
