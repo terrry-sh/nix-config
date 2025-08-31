@@ -66,7 +66,7 @@
               ruby
               php
               ocaml
-              dune-release
+              dune_3
               ocamlPackages.ocamlformat
               ocamlPackages.merlin
               futhark
