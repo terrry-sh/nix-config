@@ -35,11 +35,9 @@
               # Development tools
               claude-code
               neovim
-              vscode
               zed-editor
               alacritty
-              iterm2
-              emacs
+              rust-analyzer
 
               # Terminal utilities
               tmux
@@ -48,10 +46,11 @@
               fzf
               zoxide
               starship
+              killport
+              jq
 
               # Shells
               fish
-              nushell
 
               # Programming languages and tools
               python3
@@ -62,6 +61,16 @@
               go
               openjdk
               elan
+              nodejs
+              bun
+              ruby
+              php
+              ocaml
+              dune-release
+              ocamlPackages.ocamlformat
+              ocamlPackages.merlin
+              futhark
+              mlton
 
               # Build tools
               cmake
@@ -69,9 +78,12 @@
               automake
               libtool
               yarn
+              capnproto
+              capnproto-rust
 
               # Cloud and containers
               google-cloud-sdk
+              awscli2
               docker
               docker-compose
               podman
@@ -85,19 +97,37 @@
               gemini-cli
               symfony-cli
               protobuf
+              grpcurl
               terminal-notifier
               shellcheck
+              yt-dlp
 
               # Applications
               slack
               firefox
               google-chrome
               raycast
+              signal-desktop-bin
+              obsidian
+              anki-bin
+              spotify
+              spotifyd
+              spotify-player
+              vlc-bin
+              discord
+              inkscape
+              mkcert
+              coreutils-prefixed
+
+              # Image processing
+              imagemagick
+              djvulibre
 
               # Fonts
               nerd-fonts.jetbrains-mono
               jetbrains-mono
               cascadia-code
+              comic-neue
             ];
 
             # Environment variables

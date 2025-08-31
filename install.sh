@@ -50,8 +50,8 @@ sed "s/<USER>/$USER/g" flake-template.nix > flake.nix
 # Copy flake.nix to home-manager config
 echo -e "${YELLOW}Copying flake.nix to $CONFIG_DIR${NC}"
 if [ -e "$CONFIG_DIR/flake.nix" ] || [ -L "$CONFIG_DIR/flake.nix" ]; then
-    echo -e "${YELLOW}Backing up existing flake.nix to flake.nix.backup${NC}"
-    mv "$CONFIG_DIR/flake.nix" "$CONFIG_DIR/flake.nix.backup" 2>/dev/null || true
+    echo -e "${YELLOW}Found existing flake.nix, creating backup${NC}"
+    mv "$CONFIG_DIR/flake.nix" "$CONFIG_DIR/flake.nix.backup"
 fi
 cp flake.nix "$CONFIG_DIR/flake.nix"
 echo -e "${GREEN}Copied flake.nix to $CONFIG_DIR/flake.nix${NC}"
@@ -59,8 +59,8 @@ echo -e "${GREEN}Copied flake.nix to $CONFIG_DIR/flake.nix${NC}"
 # Symlink nix.conf
 echo -e "${YELLOW}Setting up nix.conf with experimental features${NC}"
 if [ -e "$NIX_CONFIG_DIR/nix.conf" ] || [ -L "$NIX_CONFIG_DIR/nix.conf" ]; then
-    echo -e "${YELLOW}Backing up existing nix.conf to nix.conf.backup${NC}"
-    mv "$NIX_CONFIG_DIR/nix.conf" "$NIX_CONFIG_DIR/nix.conf.backup" 2>/dev/null || true
+    echo -e "${YELLOW}Found existing nix.conf, creating backup${NC}"
+    mv "$NIX_CONFIG_DIR/nix.conf" "$NIX_CONFIG_DIR/nix.conf.backup"
 fi
 ln -sf "$(pwd)/nix.conf" "$NIX_CONFIG_DIR/nix.conf"
 echo -e "${GREEN}Symlinked nix.conf to $NIX_CONFIG_DIR/nix.conf${NC}"
