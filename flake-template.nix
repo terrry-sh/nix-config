@@ -17,6 +17,7 @@
       inherit system;
       config.allowUnfree = true;
     };
+    gcloud = pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ];
   in
   {
     homeConfigurations."<USER>" = home-manager.lib.homeManagerConfiguration {
@@ -51,6 +52,8 @@
 
               # Shells
               fish
+              nushell
+              tree
 
               # Programming languages and tools
               python3
@@ -84,6 +87,7 @@
               # Cloud and containers
               google-cloud-sdk
               awscli2
+              gcloud
               docker
               docker-compose
               podman
