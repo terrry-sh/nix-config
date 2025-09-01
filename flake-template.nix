@@ -85,7 +85,6 @@
               capnproto-rust
 
               # Cloud and containers
-              google-cloud-sdk
               awscli2
               gcloud
               docker
