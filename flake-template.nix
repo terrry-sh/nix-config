@@ -39,6 +39,8 @@
               zed-editor
               alacritty
               rust-analyzer
+              kind
+              minikube
 
               # Terminal utilities
               tmux
