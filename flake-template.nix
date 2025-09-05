@@ -78,6 +78,7 @@
               ruby
               php
               ocaml
+              opam
               dune_3
               ocamlPackages.ocamlformat
               ocamlPackages.merlin
