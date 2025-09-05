@@ -52,6 +52,12 @@
               killport
               jq
 
+              jetbrains.idea-community
+              jetbrains.pycharm-community
+              ocamlPackages.fzf
+              # zsh-fzf-tab
+
+
               # Shells
               fish
               nushell
@@ -65,6 +71,7 @@
               rustc
               go
               openjdk
+              gradle
               elan
               nodejs
               bun
@@ -76,6 +83,7 @@
               ocamlPackages.merlin
               futhark
               mlton
+              tflint
 
               # Build tools
               cmake
